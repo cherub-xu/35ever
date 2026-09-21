@@ -24,7 +24,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Soft, irregular white brush strokes */
+/* Soft background strokes */
 body::before,
 body::after {
   content: "";
@@ -69,12 +69,12 @@ body::after {
 .hero {
   text-align: center;
   margin-bottom: 5vh;
-  transform: translateY(-4vh);
+  transform: translateY(-5vh);
 }
 
 .hero h1 {
   font-family: "Times New Roman", Times, serif;
-  font-size: clamp(70px, 8vw, 115px);
+  font-size: clamp(56px, 6.4vw, 92px);
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 0.9;
@@ -139,7 +139,7 @@ body::after {
 
 .statement p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.35;
   margin-bottom: 6px;
   white-space: nowrap;
@@ -198,7 +198,7 @@ body::after {
   }
 
   .statement p {
-    font-size: 16px;
+    font-size: 17px;
     white-space: normal;
   }
 

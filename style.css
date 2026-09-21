@@ -1,3 +1,4 @@
+```css
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,15 +18,15 @@ body {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
 
-  /* Your Scotland photograph */
-  background-image: url("IMG_3888.JPG");
+  /* Scotland landscape photograph */
+  background-image: url("IMG_3888.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Very light veil over the photograph */
+/* Soft white veil over the photograph */
 body::before {
   content: "";
   position: fixed;
@@ -35,7 +36,7 @@ body::before {
   background: rgba(255, 255, 255, 0.48);
 }
 
-/* Slight softness so the photograph stays in the background */
+/* Slight softness so the photograph stays subtle */
 body::after {
   content: "";
   position: fixed;
@@ -46,6 +47,7 @@ body::after {
   -webkit-backdrop-filter: blur(1.5px);
 }
 
+/* Main page */
 .page {
   position: relative;
   z-index: 1;
@@ -57,6 +59,8 @@ body::after {
   justify-content: center;
 }
 
+
+/* Brand and slogan */
 .hero {
   text-align: center;
   margin-bottom: 5vh;
@@ -87,10 +91,13 @@ body::after {
   white-space: nowrap;
 }
 
+
+/* Services */
 .services {
   width: 100%;
   max-width: 1050px;
   margin: 0 auto 5vh;
+  transform: translateX(4vw);
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 90px;
@@ -124,6 +131,8 @@ body::after {
   font-weight: 600;
 }
 
+
+/* Statement */
 .statement {
   width: 100%;
   max-width: 1500px;
@@ -144,6 +153,8 @@ body::after {
   font-weight: 700;
 }
 
+
+/* Coming soon */
 .coming-soon {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
@@ -159,6 +170,7 @@ body::after {
   .services {
     max-width: 900px;
     column-gap: 55px;
+    transform: translateX(3vw);
   }
 
   .service-card h2 {
@@ -213,6 +225,7 @@ body::after {
     grid-template-columns: 1fr 1fr;
     column-gap: 25px;
     margin-bottom: 40px;
+    transform: translateX(0);
   }
 
   .service-card h2 {
@@ -246,8 +259,9 @@ body::after {
     grid-template-columns: 1fr;
     row-gap: 28px;
   }
-
+  
   .service-card h2 {
     font-size: 22px;
   }
 }
+```

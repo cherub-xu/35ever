@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 html,
 body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -19,208 +19,153 @@ body {
 }
 
 .page {
-  min-height: calc(100vh - 90px);
+  min-height: 100vh;
+  width: 100%;
+  padding: 4vh 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 35px 7vw 25px;
 }
 
-.header {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 7vw;
-}
-
-.logo {
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-}
-
-.header-link {
-  color: #202020;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  border-bottom: 1px solid #202020;
-  padding-bottom: 2px;
-}
-
-.eyebrow {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-}
+/* TOP */
 
 .hero {
   text-align: center;
-  margin-bottom: 38px;
-}
-
-.hero .eyebrow {
-  margin-bottom: 18px;
+  margin-bottom: 4vh;
 }
 
 .hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(48px, 6vw, 78px);
+  font-size: clamp(72px, 8vw, 120px);
   font-weight: 400;
-  line-height: 1.03;
-  letter-spacing: -2px;
+  line-height: 0.95;
+  letter-spacing: -3px;
 }
 
-.hero-text {
-  margin-top: 18px;
-  font-size: 17px;
-  line-height: 1.5;
+.slogan {
+  margin-top: 14px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(25px, 2.2vw, 34px);
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
 }
+
+/* SERVICES */
 
 .services {
-  max-width: 900px;
   width: 100%;
-  margin: 0 auto 35px;
-}
-
-.services > .eyebrow {
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.service-grid {
+  max-width: 1250px;
+  margin: 0 auto 4vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px;
+  gap: 90px;
 }
 
 .service-card {
   border-top: 1px solid #202020;
-  padding-top: 16px;
+  padding-top: 12px;
 }
 
 .service-card h2 {
   font-family: "Playfair Display", serif;
   font-size: 25px;
   font-weight: 400;
-  line-height: 1.15;
-  margin-bottom: 15px;
+  line-height: 1.2;
+  margin-bottom: 8px;
 }
 
 .price {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
   border-top: 1px solid #d6d4cf;
-  padding: 9px 0;
-  font-size: 14px;
+  padding: 8px 0 3px;
+  font-size: 17px;
 }
 
 .price strong {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
 }
 
+.photo-note {
+  font-size: 16px;
+  line-height: 1.35;
+  margin: 0 0 7px;
+}
+
+/* FOUR SENTENCES */
+
 .statement {
-  max-width: 900px;
   width: 100%;
+  max-width: 1450px;
   margin: 0 auto;
   text-align: center;
 }
 
 .statement p {
   font-family: "Playfair Display", serif;
-  font-size: 18px;
-  line-height: 1.65;
-  font-weight: 400;
-}
-
-.enquiry {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.enquiry .eyebrow {
+  font-size: 25px;
+  line-height: 1.35;
   margin-bottom: 8px;
+  white-space: nowrap;
 }
 
-.contact-text {
-  font-size: 15px;
+.statement .final-line {
+  color: #000;
+  font-weight: 600;
 }
 
-.footer {
-  min-height: 55px;
-  padding: 0 7vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 12px;
-  color: #666;
-  border-top: 1px solid #dedcd7;
+/* CONTACT */
+
+.coming-soon {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  margin-top: 2.5vh;
 }
 
-@media (max-width: 700px) {
+/* MOBILE */
 
-  .header {
-    height: 60px;
-    padding: 0 6vw;
-  }
-
-  .logo {
-    font-size: 23px;
-  }
-
+@media (max-width: 900px) {
   .page {
     min-height: auto;
-    padding: 35px 6vw 25px;
-    display: block;
+    padding: 35px 6vw;
+    justify-content: flex-start;
   }
 
   .hero {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
   }
 
   .hero h1 {
-    font-size: 47px;
-    letter-spacing: -1.5px;
+    font-size: 60px;
   }
 
-  .hero-text {
-    font-size: 15px;
+  .slogan {
+    font-size: 25px;
+    white-space: normal;
+    line-height: 1.2;
   }
 
-  .service-grid {
-    grid-template-columns: 1fr;
+  .services {
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
 
   .service-card h2 {
-    font-size: 24px;
-  }
-
-  .statement {
-    margin-top: 42px;
+    font-size: 21px;
   }
 
   .statement p {
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 20px;
+    white-space: normal;
   }
+}
 
-  .statement p br {
-    display: none;
-  }
-
-  .enquiry {
-    margin-top: 38px;
-  }
-
-  .footer {
-    margin-top: 30px;
-    padding: 15px 6vw;
-    flex-direction: column;
-    gap: 5px;
+@media (max-width: 650px) {
+  .services {
+    grid-template-columns: 1fr;
   }
 }

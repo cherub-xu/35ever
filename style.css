@@ -1,4 +1,4 @@
-```css
+```css id="2z4v2j"
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +18,6 @@ body {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
 
-  /* Scotland landscape photograph */
   background-image: url("IMG_3888.jpg");
   background-size: cover;
   background-position: center;
@@ -26,7 +25,8 @@ body {
   background-attachment: fixed;
 }
 
-/* Soft white veil over the photograph */
+
+/* Soft white layer over the photograph */
 body::before {
   content: "";
   position: fixed;
@@ -36,7 +36,8 @@ body::before {
   background: rgba(255, 255, 255, 0.48);
 }
 
-/* Slight softness so the photograph stays subtle */
+
+/* Slight blur so the photograph stays subtle */
 body::after {
   content: "";
   position: fixed;
@@ -46,6 +47,7 @@ body::after {
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
 }
+
 
 /* Main page */
 .page {
@@ -60,8 +62,12 @@ body::after {
 }
 
 
-/* Brand and slogan */
+/* =========================
+   BRAND
+   ========================= */
+
 .hero {
+  width: 100%;
   text-align: center;
   margin-bottom: 5vh;
   transform: translateY(-7vh);
@@ -92,15 +98,23 @@ body::after {
 }
 
 
-/* Services */
+/* =========================
+   SERVICES
+   ========================= */
+
 .services {
-  width: 100%;
-  max-width: 1050px;
+  width: 1050px;
+  max-width: 78vw;
   margin: 0 auto 5vh;
-  transform: translateX(4vw);
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 90px;
+
+  /* Move the whole two-column group slightly right */
+  position: relative;
+  left: 35px;
+
   align-items: start;
 }
 
@@ -119,9 +133,11 @@ body::after {
 
 .price-line {
   padding: 5px 0 3px;
+
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   line-height: 1.35;
+
   white-space: nowrap;
 }
 
@@ -132,11 +148,15 @@ body::after {
 }
 
 
-/* Statement */
+/* =========================
+   STATEMENT
+   ========================= */
+
 .statement {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
+
   text-align: center;
 }
 
@@ -145,6 +165,7 @@ body::after {
   font-size: 19px;
   line-height: 1.35;
   margin-bottom: 6px;
+
   white-space: nowrap;
 }
 
@@ -154,23 +175,32 @@ body::after {
 }
 
 
-/* Coming soon */
+/* =========================
+   GET IN TOUCH
+   ========================= */
+
 .coming-soon {
   text-align: center;
+
   font-family: "Times New Roman", Times, serif;
   font-size: 17px;
   font-weight: 400;
+
   margin-top: 2vh;
 }
 
 
-/* Tablet */
+/* =========================
+   TABLET
+   ========================= */
+
 @media (max-width: 1100px) {
 
   .services {
-    max-width: 900px;
+    width: 900px;
+    max-width: 82vw;
     column-gap: 55px;
-    transform: translateX(3vw);
+    left: 20px;
   }
 
   .service-card h2 {
@@ -183,7 +213,10 @@ body::after {
 }
 
 
-/* Mobile */
+/* =========================
+   MOBILE
+   ========================= */
+
 @media (max-width: 900px) {
 
   body {
@@ -219,13 +252,18 @@ body::after {
     line-height: 1.2;
   }
 
+
+  /* Two services side by side on mobile/tablet */
   .services {
     width: 100%;
     max-width: 100%;
+
     grid-template-columns: 1fr 1fr;
     column-gap: 25px;
+
     margin-bottom: 40px;
-    transform: translateX(0);
+
+    left: 0;
   }
 
   .service-card h2 {
@@ -241,6 +279,7 @@ body::after {
     font-size: 21px;
   }
 
+
   .statement p {
     font-size: 17px;
     white-space: normal;
@@ -252,14 +291,17 @@ body::after {
 }
 
 
-/* Small phones */
+/* =========================
+   SMALL PHONES
+   ========================= */
+
 @media (max-width: 650px) {
 
   .services {
     grid-template-columns: 1fr;
     row-gap: 28px;
   }
-  
+
   .service-card h2 {
     font-size: 22px;
   }

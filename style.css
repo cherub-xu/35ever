@@ -12,47 +12,38 @@ body {
 
 body {
   position: relative;
+  min-height: 100vh;
   overflow-x: hidden;
-  background:
-    linear-gradient(
-      135deg,
-      #edf7fd 0%,
-      #e5f2fb 45%,
-      #f3f9fd 100%
-    );
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
+
+  /* Your Scotland photograph */
+  background-image: url("IMG_3888.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-/* Soft background strokes */
-body::before,
+/* Very light veil over the photograph */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+/* Slight softness so the photograph stays in the background */
 body::after {
   content: "";
   position: fixed;
-  pointer-events: none;
+  inset: 0;
   z-index: 0;
-  opacity: 0.65;
-  filter: blur(18px);
-}
-
-body::before {
-  width: 75vw;
-  height: 18vh;
-  top: 8vh;
-  left: -12vw;
-  background: rgba(255, 255, 255, 0.72);
-  border-radius: 45% 55% 38% 62%;
-  transform: rotate(-7deg);
-}
-
-body::after {
-  width: 70vw;
-  height: 20vh;
-  right: -15vw;
-  bottom: 8vh;
-  background: rgba(255, 255, 255, 0.68);
-  border-radius: 60% 40% 55% 45%;
-  transform: rotate(8deg);
+  pointer-events: none;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
 }
 
 .page {
@@ -68,8 +59,8 @@ body::after {
 
 .hero {
   text-align: center;
-  margin-bottom: 4vh;
-  transform: translateY(-6vh);
+  margin-bottom: 5vh;
+  transform: translateY(-7vh);
 }
 
 .hero h1 {
@@ -98,11 +89,12 @@ body::after {
 
 .services {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1050px;
   margin: 0 auto 5vh;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 90px;
+  align-items: start;
 }
 
 .service-card {
@@ -115,13 +107,14 @@ body::after {
   font-size: 27px;
   font-weight: 400;
   line-height: 1.15;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .price-line {
-  padding: 4px 0 2px;
+  padding: 5px 0 3px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
+  line-height: 1.35;
   white-space: nowrap;
 }
 
@@ -159,7 +152,36 @@ body::after {
   margin-top: 2vh;
 }
 
+
+/* Tablet */
+@media (max-width: 1100px) {
+
+  .services {
+    max-width: 900px;
+    column-gap: 55px;
+  }
+
+  .service-card h2 {
+    font-size: 25px;
+  }
+
+  .price-line {
+    font-size: 16px;
+  }
+}
+
+
+/* Mobile */
 @media (max-width: 900px) {
+
+  body {
+    background-attachment: scroll;
+  }
+
+  body::before {
+    background: rgba(255, 255, 255, 0.55);
+  }
+
   .page {
     min-height: 100vh;
     padding: 35px 6vw;
@@ -168,7 +190,7 @@ body::after {
 
   .hero {
     margin-bottom: 40px;
-    transform: none;
+    transform: translateY(-2vh);
   }
 
   .hero h1 {
@@ -186,8 +208,11 @@ body::after {
   }
 
   .services {
+    width: 100%;
     max-width: 100%;
-    gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    margin-bottom: 40px;
   }
 
   .service-card h2 {
@@ -196,6 +221,11 @@ body::after {
 
   .price-line {
     white-space: normal;
+    font-size: 15px;
+  }
+
+  .price-line strong {
+    font-size: 21px;
   }
 
   .statement p {
@@ -208,8 +238,16 @@ body::after {
   }
 }
 
+
+/* Small phones */
 @media (max-width: 650px) {
+
   .services {
-    width: 100%;
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+
+  .service-card h2 {
+    font-size: 22px;
   }
 }

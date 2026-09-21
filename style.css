@@ -1,388 +1,423 @@
-```css
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+  }
 
 html,
 body {
-  width: 100%;
-  min-height: 100%;
+width: 100%;
+height: 100%;
 }
 
 body {
-  position: relative;
-  min-height: 100vh;
-  overflow-x: hidden;
+position: relative;
+width: 100%;
+height: 100vh;
+min-height: 100vh;
 
-  color: #000;
+overflow: hidden;
 
-  font-family: Arial, Helvetica, sans-serif;
+color: #000;
 
-  background-image: url("IMG_3888.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+font-family: Arial, Helvetica, sans-serif;
+
+background-image: url("IMG_3888.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 
-
 /* =================================
-   BACKGROUND
-   ================================= */
+BACKGROUND
+================================= */
 
 body::before {
-  content: "";
+content: "";
 
-  position: fixed;
-  inset: 0;
+position: fixed;
+inset: 0;
 
-  z-index: 0;
-  pointer-events: none;
+z-index: 0;
+pointer-events: none;
 
-  /* Extremely light photograph */
-  background: rgba(255, 255, 255, 0.90);
+/* Very faint photograph */
+background: rgba(255, 255, 255, 0.95);
 }
-
 
 body::after {
-  content: "";
+content: "";
 
-  position: fixed;
-  inset: 0;
+position: fixed;
+inset: 0;
 
-  z-index: 0;
-  pointer-events: none;
+z-index: 0;
+pointer-events: none;
 
-  /* Extra softness */
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
 }
 
-
 /* =================================
-   MAIN PAGE
-   ================================= */
+MAIN PAGE
+================================= */
 
 .page {
-  position: relative;
-  z-index: 1;
+position: relative;
+z-index: 1;
 
-  width: 100%;
-  min-height: 100vh;
+width: 100%;
+height: 100vh;
+min-height: 100vh;
 
-  padding: 1vh 4vw;
+padding: 0 4vw;
 
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 
-  justify-content: center;
+align-items: center;
+
+overflow: hidden;
 }
 
-
 /* =================================
-   BRAND
-   ================================= */
+BRAND
+================================= */
 
 .hero {
-  width: 100%;
+width: 100%;
 
-  text-align: center;
+text-align: center;
 
-  margin-bottom: 1.5vh;
+margin-top: 0;
+margin-bottom: 1.5vh;
 
-  transform: translateY(-3vh);
+/* Move 35 EVER higher */
+transform: translateY(-8vh);
 }
-
 
 .hero h1 {
-  font-family: "Times New Roman", Times, serif;
+font-family: "Times New Roman", Times, serif;
 
-  font-size: clamp(48px, 5vw, 72px);
+/* Slightly smaller */
+font-size: clamp(42px, 4.3vw, 62px);
 
-  font-weight: 400;
+font-weight: 400;
 
-  letter-spacing: 3px;
+letter-spacing: 3px;
 
-  line-height: 0.9;
+line-height: 0.88;
 }
-
 
 .short-line {
-  width: 440px;
-  max-width: 60vw;
+width: 430px;
+max-width: 60vw;
 
-  height: 1px;
+height: 1px;
 
-  background: #000;
+background: #000;
 
-  margin: 13px auto 13px;
+margin: 13px auto 13px;
 }
-
 
 .slogan {
-  font-family: "Times New Roman", Times, serif;
+font-family: "Times New Roman", Times, serif;
 
-  font-size: clamp(24px, 2.4vw, 34px);
+font-size: clamp(23px, 2.3vw, 33px);
 
-  font-weight: 400;
+font-weight: 400;
 
-  line-height: 1;
+line-height: 1;
 
-  white-space: nowrap;
+white-space: nowrap;
 }
 
-
 /* =================================
-   SERVICES
-   ================================= */
+SERVICES
+================================= */
 
 .services {
-  width: 940px;
-  max-width: 75vw;
+width: 1050px;
+max-width: 82vw;
 
-  margin: 0 auto 2vh;
+margin: -2vh auto 0;
 
-  display: grid;
+display: grid;
 
-  grid-template-columns: 1fr 1fr;
+grid-template-columns: 1fr 1fr;
 
-  column-gap: 70px;
+column-gap: 70px;
 
-  align-items: start;
+align-items: start;
+
+/* True horizontal centering */
+position: relative;
+left: 0;
 }
-
 
 .service-card {
-  padding: 0;
+padding: 0;
 
-  text-align: left;
+text-align: left;
 }
-
 
 .service-card h2 {
-  font-family: "Times New Roman", Times, serif;
+font-family: "Times New Roman", Times, serif;
 
-  font-size: 25px;
+font-size: 25px;
 
-  font-weight: 400;
+font-weight: 400;
 
-  line-height: 1.1;
+line-height: 1.1;
 
-  margin-bottom: 8px;
+margin-bottom: 8px;
 }
-
 
 .price-line {
-  padding: 2px 0;
+padding: 2px 0;
 
-  font-family: Arial, Helvetica, sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 
-  font-size: 15.5px;
+font-size: 15.5px;
 
-  line-height: 1.25;
+line-height: 1.25;
 
-  white-space: nowrap;
+white-space: nowrap;
 }
-
 
 .price-line strong {
-  font-family: "Times New Roman", Times, serif;
+font-family: "Times New Roman", Times, serif;
 
-  font-size: 22px;
+font-size: 22px;
 
-  font-weight: 600;
+font-weight: 600;
 }
 
-
 /* =================================
-   STATEMENT
-   ================================= */
+STATEMENT
+================================= */
 
 .statement {
-  width: 100%;
+width: 100%;
 
-  max-width: 1450px;
+max-width: 1450px;
 
-  margin: 0 auto;
+margin: 5vh auto 0;
 
-  text-align: center;
+text-align: center;
 }
-
 
 .statement p {
-  font-family: "Times New Roman", Times, serif;
+font-family: "Times New Roman", Times, serif;
 
-  font-size: 18px;
+font-size: 18px;
 
-  line-height: 1.2;
+line-height: 1.2;
 
-  margin-bottom: 2px;
+margin-bottom: 3px;
 
-  white-space: nowrap;
+white-space: nowrap;
 }
-
 
 .statement .final-line {
-  color: #000;
+color: #000;
 
-  font-weight: 700;
+font-weight: 700;
 }
 
-
 /* =================================
-   GET IN TOUCH
-   ================================= */
+GET IN TOUCH
+================================= */
 
 .coming-soon {
-  width: 100%;
+position: absolute;
 
-  text-align: center;
+left: 0;
+right: 0;
 
-  font-family: "Times New Roman", Times, serif;
+bottom: 2.2vh;
 
-  font-size: 17px;
+text-align: center;
 
-  font-weight: 400;
+font-family: "Times New Roman", Times, serif;
 
-  margin-top: 0.8vh;
+font-size: 17px;
+
+font-weight: 400;
 }
 
-
 /* =================================
-   TABLET
-   ================================= */
+TABLET
+================================= */
 
 @media (max-width: 1100px) {
 
-  .services {
-    width: 880px;
-    max-width: 80vw;
+.services {
+width: 860px;
+max-width: 78vw;
 
-    column-gap: 50px;
-  }
+```
+column-gap: 50px;
 
-  .service-card h2 {
-    font-size: 24px;
-  }
+margin-top: -2vh;
 
-  .price-line {
-    font-size: 15px;
-  }
+left: 0;
+```
+
 }
 
+.service-card h2 {
+font-size: 24px;
+}
+
+.price-line {
+font-size: 15px;
+}
+
+.statement {
+margin-top: 4vh;
+}
+}
 
 /* =================================
-   MOBILE
-   ================================= */
+MOBILE
+================================= */
 
 @media (max-width: 900px) {
 
-  body {
-    background-attachment: scroll;
-  }
+body {
+height: auto;
+min-height: 100vh;
 
+```
+overflow-y: auto;
 
-  body::before {
-    background: rgba(255, 255, 255, 0.91);
-  }
+background-attachment: scroll;
+```
 
-
-  .page {
-    min-height: 100vh;
-
-    padding: 28px 6vw;
-
-    justify-content: flex-start;
-  }
-
-
-  .hero {
-    margin-bottom: 28px;
-
-    transform: translateY(-2vh);
-  }
-
-
-  .hero h1 {
-    font-size: 58px;
-  }
-
-
-  .short-line {
-    width: 80%;
-  }
-
-
-  .slogan {
-    font-size: 24px;
-
-    white-space: normal;
-
-    line-height: 1.2;
-  }
-
-
-  .services {
-    width: 100%;
-
-    max-width: 100%;
-
-    grid-template-columns: 1fr 1fr;
-
-    column-gap: 24px;
-
-    margin-bottom: 28px;
-  }
-
-
-  .service-card h2 {
-    font-size: 21px;
-  }
-
-
-  .price-line {
-    white-space: normal;
-
-    font-size: 14px;
-
-    line-height: 1.3;
-  }
-
-
-  .price-line strong {
-    font-size: 20px;
-  }
-
-
-  .statement p {
-    font-size: 16px;
-
-    white-space: normal;
-
-    line-height: 1.25;
-  }
-
-
-  .coming-soon {
-    font-size: 16px;
-
-    margin-top: 15px;
-  }
 }
 
+body::before {
+background: rgba(255, 255, 255, 0.95);
+}
+
+.page {
+min-height: 100vh;
+height: auto;
+
+```
+padding: 28px 6vw 70px;
+
+overflow: visible;
+
+align-items: center;
+```
+
+}
+
+.hero {
+margin-bottom: 28px;
+
+```
+transform: translateY(-3vh);
+```
+
+}
+
+.hero h1 {
+font-size: 58px;
+}
+
+.short-line {
+width: 80%;
+}
+
+.slogan {
+font-size: 24px;
+
+```
+white-space: normal;
+
+line-height: 1.2;
+```
+
+}
+
+.services {
+width: 100%;
+max-width: 100%;
+
+```
+grid-template-columns: 1fr 1fr;
+
+column-gap: 24px;
+
+margin: 0;
+
+left: 0;
+```
+
+}
+
+.service-card h2 {
+font-size: 21px;
+}
+
+.price-line {
+white-space: normal;
+
+```
+font-size: 14px;
+
+line-height: 1.3;
+```
+
+}
+
+.price-line strong {
+font-size: 20px;
+}
+
+.statement {
+margin-top: 30px;
+}
+
+.statement p {
+font-size: 16px;
+
+```
+white-space: normal;
+
+line-height: 1.25;
+```
+
+}
+
+.coming-soon {
+position: static;
+
+```
+margin-top: 35px;
+
+font-size: 16px;
+```
+
+}
+}
 
 /* =================================
-   SMALL PHONES
-   ================================= */
+SMALL PHONES
+================================= */
 
 @media (max-width: 650px) {
 
-  .services {
-    grid-template-columns: 1fr;
+.services {
+grid-template-columns: 1fr;
 
-    row-gap: 24px;
-  }
-}
 ```
+row-gap: 24px;
+```
+
+}
+}

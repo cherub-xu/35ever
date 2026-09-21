@@ -11,42 +11,53 @@ body {
 }
 
 body {
+  position: relative;
+  overflow-x: hidden;
   background:
-    radial-gradient(
-      ellipse 75% 45% at 18% 15%,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(220, 235, 250, 0.75) 42%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse 65% 50% at 82% 25%,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(210, 230, 248, 0.7) 45%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse 75% 50% at 50% 85%,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(218, 234, 248, 0.7) 45%,
-      transparent 78%
-    ),
     linear-gradient(
       135deg,
-      #eaf4fc 0%,
-      #dfeef9 45%,
-      #f7fbfe 100%
+      #edf7fd 0%,
+      #e5f2fb 45%,
+      #f3f9fd 100%
     );
-
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Soft, irregular white brush strokes */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+  filter: blur(18px);
+}
 
-/* =========================
-   PAGE
-   ========================= */
+body::before {
+  width: 75vw;
+  height: 18vh;
+  top: 8vh;
+  left: -12vw;
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 45% 55% 38% 62%;
+  transform: rotate(-7deg);
+}
+
+body::after {
+  width: 70vw;
+  height: 20vh;
+  right: -15vw;
+  bottom: 8vh;
+  background: rgba(255, 255, 255, 0.68);
+  border-radius: 60% 40% 55% 45%;
+  transform: rotate(8deg);
+}
 
 .page {
+  position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 100vh;
   padding: 3vh 4vw;
@@ -55,15 +66,10 @@ body {
   justify-content: center;
 }
 
-
-/* =========================
-   BRAND
-   ========================= */
-
 .hero {
   text-align: center;
   margin-bottom: 5vh;
-  transform: translateY(-2vh);
+  transform: translateY(-4vh);
 }
 
 .hero h1 {
@@ -90,11 +96,6 @@ body {
   white-space: nowrap;
 }
 
-
-/* =========================
-   SERVICES
-   ========================= */
-
 .services {
   width: 100%;
   max-width: 1500px;
@@ -116,11 +117,6 @@ body {
   margin-bottom: 12px;
 }
 
-
-/* =========================
-   PRICES
-   ========================= */
-
 .price-line {
   padding: 5px 0 3px;
   font-family: Arial, Helvetica, sans-serif;
@@ -133,11 +129,6 @@ body {
   font-size: 23px;
   font-weight: 600;
 }
-
-
-/* =========================
-   STATEMENTS
-   ========================= */
 
 .statement {
   width: 100%;
@@ -159,26 +150,15 @@ body {
   font-weight: 700;
 }
 
-
-/* =========================
-   CONTACT
-   ========================= */
-
 .coming-soon {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
-  font-size: 10px;
+  font-size: 17px;
   font-weight: 400;
   margin-top: 2vh;
 }
 
-
-/* =========================
-   MOBILE
-   ========================= */
-
 @media (max-width: 900px) {
-
   .page {
     min-height: 100vh;
     padding: 35px 6vw;
@@ -221,13 +201,14 @@ body {
     font-size: 16px;
     white-space: normal;
   }
+
+  .coming-soon {
+    font-size: 16px;
+  }
 }
 
-
 @media (max-width: 650px) {
-
   .services {
     grid-template-columns: 1fr;
   }
-
 }

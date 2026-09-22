@@ -27,7 +27,7 @@ body {
 
   font-family: Arial, Helvetica, sans-serif;
 
-  background-image: url("IMG_3888.jpg");
+  background-image: url("IMG_3888.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ body {
 
 
 /* =================================
-   BACKGROUND
+   VERY LIGHT BACKGROUND
    ================================= */
 
 body::before {
@@ -86,7 +86,7 @@ body::after {
 
 
 /* =================================
-   BRAND
+   HEADER
    ================================= */
 
 .hero {
@@ -134,16 +134,15 @@ body::after {
 
 
 /* =================================
-   WHOLE CONTENT GROUP
-   SERVICES + FOUR STATEMENTS
+   SERVICES + STATEMENTS
+   ONE GROUP
    ================================= */
 
 .content-group {
   width: 100%;
 
   /*
-     Move the entire services + statements
-     group down together.
+     The entire block is moved down together.
   */
   margin-top: calc(10vh + 2cm);
 
@@ -167,9 +166,9 @@ body::after {
 
   column-gap: 85px;
 
-  text-align: left;
-
   align-items: start;
+
+  text-align: left;
 }
 
 .service-card {
@@ -197,6 +196,11 @@ body::after {
 
   left: 55px;
 }
+
+
+/* =================================
+   PRICES
+   ================================= */
 
 .price-line {
   font-family: Arial, Helvetica, sans-serif;
@@ -226,10 +230,6 @@ body::after {
 .statement {
   width: 100%;
 
-  /*
-     Clear space between packages
-     and the four statements.
-  */
   margin-top: 15vh;
 
   text-align: center;
@@ -258,6 +258,7 @@ body::after {
 
 /* =================================
    GET IN TOUCH
+   FIXED AT BOTTOM
    ================================= */
 
 .coming-soon {

@@ -1,4 +1,4 @@
-```css
+```css id="v2h8kx"
 * {
   box-sizing: border-box;
   margin: 0;
@@ -86,7 +86,7 @@ BRAND
 ================================= */
 
 .hero {
-  width: calc(100% + 8vw);
+  width: 100vw;
 
   margin-left: -4vw;
 
@@ -113,7 +113,7 @@ BRAND
 
   height: 1px;
 
-  margin: 3px auto 11px;
+  margin: 0 auto 11px;
 
   background: #000;
 }
@@ -205,9 +205,11 @@ STATEMENTS
 ================================= */
 
 .statement {
-  width: 100%;
+  width: 100vw;
 
-  margin: 9vh auto 0;
+  margin-left: -4vw;
+
+  margin-top: 9vh;
 
   text-align: center;
 }
@@ -239,8 +241,8 @@ GET IN TOUCH
 .coming-soon {
   position: absolute;
 
-  left: 0;
-  right: 0;
+  left: -4vw;
+  right: -4vw;
 
   bottom: 3vh;
 
@@ -367,6 +369,8 @@ MOBILE
   }
 
   .statement {
+    width: 100%;
+    margin-left: 0;
     margin-top: 45px;
   }
 
@@ -397,4 +401,14 @@ SMALL PHONES
 
 /* =================================
 FINAL POSITION ADJUSTMENT
+================================= */
+
+@media (min-width: 901px) {
+
+  .services,
+  .statement {
+    transform: translateY(20px);
+  }
+
+}
 ```

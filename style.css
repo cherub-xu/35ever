@@ -1,8 +1,9 @@
+```css
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  }
+}
 
 /* =================================
 PAGE
@@ -10,25 +11,25 @@ PAGE
 
 html,
 body {
-width: 100%;
-height: 100%;
-overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-position: relative;
+  position: relative;
 
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
 
-color: #000;
+  color: #000;
 
-font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
-background-image: url("IMG_3888.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  background-image: url("IMG_3888.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* =================================
@@ -36,30 +37,30 @@ BACKGROUND
 ================================= */
 
 body::before {
-content: "";
+  content: "";
 
-position: fixed;
-inset: 0;
+  position: fixed;
+  inset: 0;
 
-z-index: 0;
+  z-index: 0;
 
-background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.95);
 
-pointer-events: none;
+  pointer-events: none;
 }
 
 body::after {
-content: "";
+  content: "";
 
-position: fixed;
-inset: 0;
+  position: fixed;
+  inset: 0;
 
-z-index: 0;
+  z-index: 0;
 
-backdrop-filter: blur(4px);
--webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
-pointer-events: none;
+  pointer-events: none;
 }
 
 /* =================================
@@ -67,17 +68,17 @@ MAIN PAGE
 ================================= */
 
 .page {
-position: relative;
-z-index: 1;
+  position: relative;
+  z-index: 1;
 
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
 
-overflow: hidden;
+  overflow: hidden;
 
-padding: 0 4vw;
+  padding: 0 4vw;
 
-text-align: center;
+  text-align: center;
 }
 
 /* =================================
@@ -85,46 +86,46 @@ BRAND
 ================================= */
 
 .hero {
-width: 100%;
+  width: 100%;
 
-padding-top: 3.5vh;
+  padding-top: 3.5vh;
 
-text-align: center;
+  text-align: center;
 }
 
 .hero h1 {
-font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
 
-font-size: clamp(48px, 4.8vw, 68px);
+  font-size: clamp(48px, 4.8vw, 68px);
 
-font-weight: 400;
+  font-weight: 400;
 
-letter-spacing: 3px;
+  letter-spacing: 3px;
 
-line-height: 0.9;
+  line-height: 0.9;
 }
 
 .short-line {
-width: 430px;
-max-width: 55vw;
+  width: 430px;
+  max-width: 55vw;
 
-height: 1px;
+  height: 1px;
 
-margin: 9px auto 11px;
+  margin: 9px auto 11px;
 
-background: #000;
+  background: #000;
 }
 
 .slogan {
-font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
 
-font-size: clamp(22px, 2.2vw, 31px);
+  font-size: clamp(22px, 2.2vw, 31px);
 
-font-weight: 400;
+  font-weight: 400;
 
-line-height: 1;
+  line-height: 1;
 
-white-space: nowrap;
+  white-space: nowrap;
 }
 
 /* =================================
@@ -132,69 +133,69 @@ SERVICES
 ================================= */
 
 .services {
-width: 1100px;
-max-width: 88vw;
+  width: 1100px;
+  max-width: 88vw;
 
-margin: 10vh auto 0;
+  margin: 10vh auto 0;
 
-display: grid;
+  display: grid;
 
-grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
-column-gap: 85px;
+  column-gap: 85px;
 
-text-align: left;
+  text-align: left;
 
-align-items: start;
+  align-items: start;
 }
 
 /* Individual service blocks */
 
 .service-card {
-min-width: 0;
+  min-width: 0;
 }
 
 /* Wedding stays on one line */
 
 .service-card h2 {
-font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
 
-font-size: 25px;
+  font-size: 25px;
 
-font-weight: 400;
+  font-weight: 400;
 
-line-height: 1.1;
+  line-height: 1.1;
 
-margin-bottom: 11px;
+  margin-bottom: 11px;
 
-white-space: nowrap;
+  white-space: nowrap;
 }
 
 /* Move Citizenship slightly to the right */
 
 .service-card.citizenship {
-position: relative;
-left: 30px;
+  position: relative;
+  left: 30px;
 }
 
 .price-line {
-font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
-font-size: 16px;
+  font-size: 16px;
 
-line-height: 1.35;
+  line-height: 1.35;
 
-white-space: nowrap;
+  white-space: nowrap;
 
-margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .price-line strong {
-font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
 
-font-size: 23px;
+  font-size: 23px;
 
-font-weight: 600;
+  font-weight: 600;
 }
 
 /* =================================
@@ -202,31 +203,31 @@ STATEMENTS
 ================================= */
 
 .statement {
-width: 100%;
+  width: 100%;
 
-margin: 9vh auto 0;
+  margin: 9vh auto 0;
 
-text-align: center;
+  text-align: center;
 }
 
 .statement p {
-font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
 
-font-size: 18px;
+  font-size: 18px;
 
-font-weight: 400;
+  font-weight: 400;
 
-line-height: 1.25;
+  line-height: 1.25;
 
-margin-bottom: 5px;
+  margin-bottom: 5px;
 
-white-space: nowrap;
+  white-space: nowrap;
 }
 
 .statement .final-line {
-color: #000;
+  color: #000;
 
-font-weight: 700;
+  font-weight: 700;
 }
 
 /* =================================
@@ -234,20 +235,20 @@ GET IN TOUCH
 ================================= */
 
 .coming-soon {
-position: absolute;
+  position: absolute;
 
-left: 0;
-right: 0;
+  left: 0;
+  right: 0;
 
-bottom: 3vh;
+  bottom: 3vh;
 
-font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
 
-font-size: 17px;
+  font-size: 17px;
 
-font-weight: 400;
+  font-weight: 400;
 
-text-align: center;
+  text-align: center;
 }
 
 /* =================================
@@ -256,44 +257,39 @@ TABLET
 
 @media (max-width: 1100px) {
 
-.hero {
-padding-top: 3vh;
-}
+  .hero {
+    padding-top: 3vh;
+  }
 
-.services {
-width: 94vw;
+  .services {
+    width: 94vw;
+    column-gap: 55px;
+    margin-top: 8vh;
+  }
 
-```
-column-gap: 55px;
+  .service-card h2 {
+    font-size: 22px;
+  }
 
-margin-top: 8vh;
-```
+  .price-line {
+    font-size: 15px;
+  }
 
-}
+  .price-line strong {
+    font-size: 22px;
+  }
 
-.service-card h2 {
-font-size: 22px;
-}
+  .service-card.citizenship {
+    left: 20px;
+  }
 
-.price-line {
-font-size: 15px;
-}
+  .statement {
+    margin-top: 7vh;
+  }
 
-.price-line strong {
-font-size: 22px;
-}
-
-.service-card.citizenship {
-left: 20px;
-}
-
-.statement {
-margin-top: 7vh;
-}
-
-.statement p {
-font-size: 17px;
-}
+  .statement p {
+    font-size: 17px;
+  }
 }
 
 /* =================================
@@ -302,120 +298,85 @@ MOBILE
 
 @media (max-width: 900px) {
 
-html,
-body {
-height: auto;
-min-height: 100%;
-overflow-y: auto;
-}
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+  }
 
-body {
-background-attachment: scroll;
-}
+  body {
+    background-attachment: scroll;
+  }
 
-.page {
-height: auto;
-min-height: 100vh;
+  .page {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding: 30px 6vw 65px;
+  }
 
-```
-overflow: visible;
+  .hero {
+    padding-top: 0;
+  }
 
-padding: 30px 6vw 65px;
-```
+  .hero h1 {
+    font-size: 56px;
+  }
 
-}
+  .short-line {
+    width: 80%;
+    max-width: 430px;
+  }
 
-.hero {
-padding-top: 0;
-}
+  .slogan {
+    font-size: 23px;
+    line-height: 1.2;
+    white-space: normal;
+  }
 
-.hero h1 {
-font-size: 56px;
-}
+  .services {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 45px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+  }
 
-.short-line {
-width: 80%;
-max-width: 430px;
-}
+  .service-card.citizenship {
+    left: 0;
+  }
 
-.slogan {
-font-size: 23px;
+  .service-card h2 {
+    font-size: 19px;
+    white-space: normal;
+  }
 
-```
-line-height: 1.2;
+  .price-line {
+    font-size: 14px;
+    white-space: normal;
+    line-height: 1.35;
+  }
 
-white-space: normal;
-```
+  .price-line strong {
+    font-size: 20px;
+  }
 
-}
+  .statement {
+    margin-top: 45px;
+  }
 
-.services {
-width: 100%;
-max-width: 100%;
+  .statement p {
+    font-size: 16px;
+    white-space: normal;
+    line-height: 1.3;
+  }
 
-```
-margin-top: 45px;
-
-grid-template-columns: 1fr 1fr;
-
-column-gap: 24px;
-```
-
-}
-
-.service-card.citizenship {
-left: 0;
-}
-
-.service-card h2 {
-font-size: 19px;
-
-```
-white-space: normal;
-```
-
-}
-
-.price-line {
-font-size: 14px;
-
-```
-white-space: normal;
-
-line-height: 1.35;
-```
-
-}
-
-.price-line strong {
-font-size: 20px;
-}
-
-.statement {
-margin-top: 45px;
-}
-
-.statement p {
-font-size: 16px;
-
-```
-white-space: normal;
-
-line-height: 1.3;
-```
-
-}
-
-.coming-soon {
-position: static;
-
-```
-margin-top: 55px;
-
-font-size: 16px;
-```
-
-}
+  .coming-soon {
+    position: static;
+    margin-top: 55px;
+    font-size: 16px;
+  }
 }
 
 /* =================================
@@ -424,12 +385,22 @@ SMALL PHONES
 
 @media (max-width: 650px) {
 
-.services {
-grid-template-columns: 1fr;
+  .services {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+}
 
-```
-row-gap: 28px;
-```
+/* =================================
+FINAL POSITION ADJUSTMENT
+================================= */
+
+@media (min-width: 901px) {
+
+  .services,
+  .statement {
+    transform: translateY(10px);
+  }
 
 }
-}
+```

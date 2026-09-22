@@ -86,7 +86,9 @@ BRAND
 ================================= */
 
 .hero {
-  width: 100%;
+  width: calc(100% + 8vw);
+
+  margin-left: -4vw;
 
   padding-top: 3.5vh;
 
@@ -111,7 +113,7 @@ BRAND
 
   height: 1px;
 
-  margin: 9px auto 11px;
+  margin: 3px auto 11px;
 
   background: #000;
 }
@@ -317,6 +319,8 @@ MOBILE
   }
 
   .hero {
+    width: 100%;
+    margin-left: 0;
     padding-top: 0;
   }
 
@@ -393,14 +397,4 @@ SMALL PHONES
 
 /* =================================
 FINAL POSITION ADJUSTMENT
-================================= */
-
-@media (min-width: 901px) {
-
-  .services,
-  .statement {
-    transform: translateY(10px);
-  }
-
-}
 ```

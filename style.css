@@ -132,13 +132,14 @@ SERVICES
 ================================= */
 
 .services {
-  width: max-content;
+  width: 80%;
+  max-width: 1000px;
 
   margin: 10vh auto 0;
 
   display: grid;
 
-  grid-template-columns: max-content max-content;
+  grid-template-columns: 1fr 1fr;
 
   column-gap: 85px;
 
@@ -191,12 +192,24 @@ SERVICES
   font-weight: 600;
 }
 
+.price-description {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.35;
+
+  margin-bottom: 12px;
+}
+
 /* =================================
 STATEMENTS
 ================================= */
 
 .statement {
-  width: 100%;
+  width: 65%;
+
+  max-width: 900px;
 
   margin: 9vh auto 0;
 
@@ -222,7 +235,7 @@ STATEMENTS
 
   margin-bottom: 5px;
 
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .statement .final-line {
@@ -265,7 +278,8 @@ TABLET
   }
 
   .services {
-    width: max-content;
+    width: 80%;
+    max-width: 1000px;
 
     column-gap: 55px;
 
@@ -282,6 +296,10 @@ TABLET
 
   .price-line strong {
     font-size: 22px;
+  }
+
+  .price-description {
+    font-size: 14px;
   }
 
   .statement {
@@ -380,6 +398,14 @@ MOBILE
 
   .price-line strong {
     font-size: 20px;
+  }
+
+  .price-description {
+    font-size: 14px;
+
+    line-height: 1.35;
+
+    margin-bottom: 12px;
   }
 
   .statement {

@@ -85,15 +85,9 @@ BRAND
 ================================= */
 
 .hero {
-  position: relative;
-
-  left: 50%;
-
   width: 100vw;
 
-  margin-left: 0;
-
-  transform: translateX(-50%);
+  margin-left: -4vw;
 
   padding-top: 3.5vh;
 
@@ -109,7 +103,7 @@ BRAND
 
   letter-spacing: 3px;
 
-  line-height: 0.72;
+  line-height: 0.9;
 }
 
 .short-line {
@@ -118,7 +112,7 @@ BRAND
 
   height: 1px;
 
-  margin: -3px auto 11px;
+  margin: 1px auto 11px;
 
   background: #000;
 }
@@ -154,11 +148,17 @@ SERVICES
   text-align: left;
 
   align-items: start;
+
+  transform: translateY(20px);
 }
+
+/* Individual service blocks */
 
 .service-card {
   min-width: 0;
 }
+
+/* Wedding stays on one line */
 
 .service-card h2 {
   font-family: "Times New Roman", Times, serif;
@@ -173,6 +173,8 @@ SERVICES
 
   white-space: nowrap;
 }
+
+/* Citizenship stays in the same position */
 
 .service-card.citizenship {
   position: relative;
@@ -204,19 +206,22 @@ STATEMENTS
 ================================= */
 
 .statement {
-  position: relative;
-
-  left: 50%;
-
   width: 100vw;
 
-  margin-left: 0;
+  margin-left: -4vw;
 
   margin-top: 9vh;
 
-  transform: translateX(-50%);
-
   text-align: center;
+}
+
+/* Keep the statements at the same vertical position */
+
+@media (min-width: 901px) {
+  .statement {
+    position: relative;
+    top: 20px;
+  }
 }
 
 .statement p {
@@ -246,8 +251,8 @@ GET IN TOUCH
 .coming-soon {
   position: absolute;
 
-  left: -4vw;
-  right: -4vw;
+  left: 0;
+  right: 0;
 
   bottom: 3vh;
 
@@ -326,26 +331,19 @@ MOBILE
   }
 
   .hero {
-    left: 0;
-
     width: 100%;
-
     margin-left: 0;
-
-    transform: none;
-
     padding-top: 0;
   }
 
   .hero h1 {
     font-size: 56px;
-    line-height: 0.72;
   }
 
   .short-line {
     width: 80%;
     max-width: 430px;
-    margin-top: -3px;
+    margin: 3px auto 11px;
   }
 
   .slogan {
@@ -360,6 +358,7 @@ MOBILE
     margin-top: 45px;
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
+    transform: none;
   }
 
   .service-card.citizenship {
@@ -382,15 +381,10 @@ MOBILE
   }
 
   .statement {
-    left: 0;
-
     width: 100%;
-
     margin-left: 0;
-
     margin-top: 45px;
-
-    transform: none;
+    top: auto;
   }
 
   .statement p {
@@ -416,17 +410,4 @@ SMALL PHONES
     grid-template-columns: 1fr;
     row-gap: 28px;
   }
-}
-
-/* =================================
-FINAL POSITION ADJUSTMENT
-================================= */
-
-@media (min-width: 901px) {
-
-  .services,
-  .statement {
-    transform: translateY(20px);
-  }
-
 }

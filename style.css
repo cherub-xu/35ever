@@ -1,4 +1,3 @@
-```css
 * {
   box-sizing: border-box;
   margin: 0;
@@ -71,12 +70,12 @@ MAIN PAGE
   position: relative;
   z-index: 1;
 
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
-  overflow: hidden;
+  margin: 0;
 
-  padding: 0 4vw;
+  overflow: hidden;
 
   text-align: center;
 }
@@ -134,7 +133,6 @@ SERVICES
 
 .services {
   width: max-content;
-  max-width: 88vw;
 
   margin: 10vh auto 0;
 
@@ -151,13 +149,9 @@ SERVICES
   transform: translateY(20px);
 }
 
-/* Individual service blocks */
-
 .service-card {
   min-width: 0;
 }
-
-/* Wedding stays on one line */
 
 .service-card h2 {
   font-family: "Times New Roman", Times, serif;
@@ -172,8 +166,6 @@ SERVICES
 
   white-space: nowrap;
 }
-
-/* No horizontal offset */
 
 .service-card.citizenship {
   position: static;
@@ -214,6 +206,7 @@ STATEMENTS
 @media (min-width: 901px) {
   .statement {
     position: relative;
+
     top: 20px;
   }
 }
@@ -250,6 +243,8 @@ GET IN TOUCH
 
   bottom: 3vh;
 
+  width: 100%;
+
   font-family: "Times New Roman", Times, serif;
 
   font-size: 17px;
@@ -271,7 +266,9 @@ TABLET
 
   .services {
     width: max-content;
+
     column-gap: 55px;
+
     margin-top: 8vh;
   }
 
@@ -285,10 +282,6 @@ TABLET
 
   .price-line strong {
     font-size: 22px;
-  }
-
-  .service-card.citizenship {
-    position: static;
   }
 
   .statement {
@@ -318,14 +311,19 @@ MOBILE
   }
 
   .page {
+    width: 100%;
+
     height: auto;
     min-height: 100vh;
+
     overflow: visible;
+
     padding: 30px 6vw 65px;
   }
 
   .hero {
     width: 100%;
+
     padding-top: 0;
   }
 
@@ -335,22 +333,30 @@ MOBILE
 
   .short-line {
     width: 80%;
+
     max-width: 430px;
+
     margin: 7px auto 11px;
   }
 
   .slogan {
     font-size: 23px;
+
     line-height: 1.2;
+
     white-space: normal;
   }
 
   .services {
     width: 100%;
     max-width: 100%;
+
     margin-top: 45px;
+
     grid-template-columns: 1fr 1fr;
+
     column-gap: 24px;
+
     transform: none;
   }
 
@@ -360,12 +366,15 @@ MOBILE
 
   .service-card h2 {
     font-size: 19px;
+
     white-space: normal;
   }
 
   .price-line {
     font-size: 14px;
+
     white-space: normal;
+
     line-height: 1.35;
   }
 
@@ -375,19 +384,27 @@ MOBILE
 
   .statement {
     width: 100%;
+
     margin: 45px auto 0;
+
     position: static;
   }
 
   .statement p {
     font-size: 16px;
+
     white-space: normal;
+
     line-height: 1.3;
   }
 
   .coming-soon {
     position: static;
+
+    width: 100%;
+
     margin-top: 55px;
+
     font-size: 16px;
   }
 }
@@ -400,7 +417,7 @@ SMALL PHONES
 
   .services {
     grid-template-columns: 1fr;
+
     row-gap: 28px;
   }
 }
-```

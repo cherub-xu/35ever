@@ -1,3 +1,4 @@
+```css
 * {
   box-sizing: border-box;
   margin: 0;
@@ -85,9 +86,7 @@ BRAND
 ================================= */
 
 .hero {
-  width: 100vw;
-
-  margin-left: -4vw;
+  width: 100%;
 
   padding-top: 3.5vh;
 
@@ -103,7 +102,7 @@ BRAND
 
   letter-spacing: 3px;
 
-  line-height: 0.9;
+  line-height: 1;
 }
 
 .short-line {
@@ -112,7 +111,7 @@ BRAND
 
   height: 1px;
 
-  margin: 1px auto 11px;
+  margin: 7px auto 11px;
 
   background: #000;
 }
@@ -134,14 +133,14 @@ SERVICES
 ================================= */
 
 .services {
-  width: 1100px;
+  width: max-content;
   max-width: 88vw;
 
   margin: 10vh auto 0;
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content max-content;
 
   column-gap: 85px;
 
@@ -174,11 +173,10 @@ SERVICES
   white-space: nowrap;
 }
 
-/* Citizenship stays in the same position */
+/* No horizontal offset */
 
 .service-card.citizenship {
-  position: relative;
-  left: 30px;
+  position: static;
 }
 
 .price-line {
@@ -206,16 +204,12 @@ STATEMENTS
 ================================= */
 
 .statement {
-  width: 100vw;
+  width: 100%;
 
-  margin-left: -4vw;
-
-  margin-top: 9vh;
+  margin: 9vh auto 0;
 
   text-align: center;
 }
-
-/* Keep the statements at the same vertical position */
 
 @media (min-width: 901px) {
   .statement {
@@ -276,7 +270,7 @@ TABLET
   }
 
   .services {
-    width: 94vw;
+    width: max-content;
     column-gap: 55px;
     margin-top: 8vh;
   }
@@ -294,7 +288,7 @@ TABLET
   }
 
   .service-card.citizenship {
-    left: 20px;
+    position: static;
   }
 
   .statement {
@@ -332,7 +326,6 @@ MOBILE
 
   .hero {
     width: 100%;
-    margin-left: 0;
     padding-top: 0;
   }
 
@@ -343,7 +336,7 @@ MOBILE
   .short-line {
     width: 80%;
     max-width: 430px;
-    margin: 3px auto 11px;
+    margin: 7px auto 11px;
   }
 
   .slogan {
@@ -362,7 +355,7 @@ MOBILE
   }
 
   .service-card.citizenship {
-    left: 0;
+    position: static;
   }
 
   .service-card h2 {
@@ -382,9 +375,8 @@ MOBILE
 
   .statement {
     width: 100%;
-    margin-left: 0;
-    margin-top: 45px;
-    top: auto;
+    margin: 45px auto 0;
+    position: static;
   }
 
   .statement p {
@@ -411,3 +403,4 @@ SMALL PHONES
     row-gap: 28px;
   }
 }
+```
